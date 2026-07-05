@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.maps_app"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 31
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
