@@ -4,6 +4,7 @@ import 'package:maps_app/blocs/blocs.dart';
 import 'package:maps_app/screens/screens.dart';
 
 void main() {
+  // confirmar estados primero y luego construir el bloc. (en caso de preocuparnos demasiado por el primer estado inicial)
   runApp(
     MultiBlocProvider(
       providers: [BlocProvider(create: (context) => GpsBloc())],
@@ -20,7 +21,7 @@ class MapsApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'MapsApp',
-      home: GpsAccessScreen(),
+      home: LoadingScreen(),
     );
   }
 }
