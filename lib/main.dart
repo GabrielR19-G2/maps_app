@@ -7,7 +7,10 @@ void main() {
   // confirmar estados primero y luego construir el bloc. (en caso de preocuparnos demasiado por el primer estado inicial)
   runApp(
     MultiBlocProvider(
-      providers: [BlocProvider(create: (context) => GpsBloc())],
+      providers: [
+        BlocProvider(create: (context) => GpsBloc()),
+        BlocProvider(create: (context) => LocationBloc()),
+      ],
       child: const MapsApp(),
     ),
   );
